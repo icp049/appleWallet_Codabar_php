@@ -19,9 +19,13 @@ NOTE: you will use the php-pkpass library so its important to handle the certifi
 14) Run the commands below to generate the key_new.p12
 
 ####### Code Structure #######
+
+
 1) Add the p12 file in root directory
 
+
 $passJson = [
+
             "formatVersion" => 1,
             "passTypeIdentifier" => "pass.[passname]",
             "serialNumber" => $serialNumber,
@@ -49,6 +53,7 @@ $passJson = [
 
 
  try {
+ 
             $pass = new PKPass('key_new.p12', 'password for p12 file');
             $pass->setData(json_encode($passJson));
 
@@ -71,7 +76,11 @@ $passJson = [
             exit;
         }
     }
-} else {
+
+}
+
+else {
+
     echo "Invalid submission.";
 }
 
@@ -94,44 +103,80 @@ Copyright (C) Microsoft Corporation. All rights reserved.
 
 Try the new cross-platform PowerShell https://aka.ms/pscore6
 
+
 PS C:\Users\ipedeglorio> cd Certificates2 
+
 PS C:\Users\ipedeglorio\Certificates2> $env:OPENSSL_MODULES="C:\Users\ipedeglorio\OpenSSL-Win64\lib\ossl-modules"
+
 PS C:\Users\ipedeglorio\Certificates2> openssl pkcs12 -legacy -in Certificates.p12 -nodes -out key_decrypted.tmp
+
 Enter Import Password:
+
 PS C:\Users\ipedeglorio\Certificates2> openssl pkcs12 -in key_decrypted.tmp -export -out key_new.p12
+
 Enter Export Password:
+
 Verifying - Enter Export Password:
 
-#####Here is a history 29 of my logs when I did it#########
+##### Here are my logs when I did it#########
 
    95  DMSs-iMac:Certificates2 dmsstudio$ ls -l Certificates.p12
+   
    96  ls -l Certificates.p12
+   
    97  openssl pkcs12 -in Certificates.p12 -nodes -out key_decrypted.tmp
+   
    98  openssl pkcs12 -in key_decrypted.tmp -export -out key_new.p12
+   
    99  openssl pkcs12 -legacy -in Certificates.p12 -nodes -out key_decrypted.tmp
+
+
   100  openssl pkcs12 -in key_decrypted.tmp -export -out key_new.p12
+  
   101  openssl pkcs12 -legacy -in Certificates.p12 -nodes -out key_decrypted.tmp
+  
   102  openssl pkcs12 -legacy -in Certificates.p12 -nodes -out key_decrypted.tmp
+  
   103  openssl pkcs12 -legacy -in Certificates.p12 -nodes -out key_decrypted.tmp
+  
   104  openssl pkcs12 -legacy -in Certificates.p12 -nodes -out key_decrypted.tmp
+  
   105  cd Desktop
+  
   106  cd certificates.p12
+  
   107  cd Certificates.p12
+
   108  cd Certificates2
+  
   109  openssl pkcs12 -legacy -in Certificates.p12 -nodes -out key_decrypted.tmp
+  
   110  openssl pkcs12 -in key_decrypted.tmp -export -out key_new.p12
+  
   111  cd etc
+  
   112  cd usr
+  
   113  which openssl
+  
   114  sudo find / -name openssl.cnf 2>/dev/null
+  
   115  sudo nano /private/etc/ssl/openssl.cnf
+  
   116  cd Desktop
+  
   117  cd §Certificates2
+  
   118  cd Certificates2
+  
   119  openssl pkcs12 -legacy -in Certificates.p12 -nodes -out key_decrypted.tmp
+  
   120  openssl pkcs12 -in key_decrypted.tmp -export -out key_new.p12
+  
   121  openssl pkcs12 -legacy -in Certificates.p12 -nodes -out key_decrypted.tmp
+  
   122  openssl pkcs12 -in key_decrypted.tmp -export -out key_new.p12
+  
   123  history 29
 
 
