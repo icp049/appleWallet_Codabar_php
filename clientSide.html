@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pass Creator</title>
+</head>
+<body>
+    <form id="passForm" action="wallet.php" method="POST">
+        <label for="name">Name:</label>
+        <input type="text" name="name" id="name" required />
+
+        <label for="accountNumber">Account Number:</label>
+        <input type="text" name="accountNumber" id="accountNumber" required />
+
+        <label for="isaMember">Is a member:</label>
+        <input type="checkbox" name="isaMember" id="isaMember" value="1" />
+
+        <!-- Image submit button -->
+        <input type="image" src="applewalletbadge.png" alt="Submit" 
+        style="height: 14mm; padding: calc(14mm / 4); box-sizing: content-box;">
+    </form>
+</body>
+</html>
