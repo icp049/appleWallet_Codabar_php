@@ -24,7 +24,7 @@ NOTE: you will use the php-pkpass library so its important to handle the certifi
 1) Add the p12 file in root directory
 
 
-$passJson = [
+ $passJson = [
 
             "formatVersion" => 1,
             "passTypeIdentifier" => "pass.[passname]",
@@ -52,7 +52,8 @@ $passJson = [
 
 
 
- try {
+
+    try {
  
             $pass = new PKPass('key_new.p12', 'password for p12 file');
             $pass->setData(json_encode($passJson));
@@ -77,12 +78,12 @@ $passJson = [
         }
     }
 
-}
+   }
 
-else {
+   else {
 
     echo "Invalid submission.";
-}
+ }
 
 
 
@@ -178,6 +179,9 @@ Verifying - Enter Export Password:
   122  openssl pkcs12 -in key_decrypted.tmp -export -out key_new.p12
   
   123  history 29
+
+
+
 
 
 
