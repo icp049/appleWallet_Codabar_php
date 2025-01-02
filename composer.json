@@ -1,0 +1,8 @@
+{
+    "require": {
+        "pkpass/pkpass": "^2.3",
+        "tecnickcom/tcpdf": "^6.7",
+        "picqer/php-barcode-generator": "^2.4",
+        "tecnickcom/tc-lib-pdf": "^8.0"
+    }
+}
