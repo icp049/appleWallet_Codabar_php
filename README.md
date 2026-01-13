@@ -140,7 +140,7 @@ https://developer.apple.com/help/account/create-certificates/create-a-certificat
 - Both examples include: A frontend form and a backend php script
 - Full PassKit (.pkpass) generation using php-pkpass
 
-🅿️ Example 1: PHP-Only Barcode Generation (Backend)
+1️⃣ Example 1: PHP-Only Barcode Generation (Backend)
 The barcode is generated entirely on the server
 Uses the PHP library:
 -picqer/php-barcode-generator
@@ -162,7 +162,7 @@ User submits:
 -Creates pass.json
 -Signs and generates the .pkpass file
 
-🌐 Example 2: JavaScript Barcode Generation (Frontend) + PHP Backend
+2️⃣ Example 2: JavaScript Barcode Generation (Frontend) + PHP Backend
 - The barcode is generated in the browser using JavaScript
 
 Uses:
