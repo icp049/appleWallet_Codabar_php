@@ -11,8 +11,7 @@ Instead of relying on Apple’s native barcode formats, this implementation:
 
 📥 Composer Installation
 
-✅ Minimum Required (Recommended)
-composer require pkpass/pkpass picqer/php-barcode-generator
+- composer require pkpass/pkpass picqer/php-barcode-generator
 
 
 🛠️ Apple Developer Setup
