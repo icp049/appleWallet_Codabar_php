@@ -111,6 +111,7 @@ $passJson = [
 ];
 
 
+
 🧩 PHP Pass Generation
 
 $pass = new PKPass('key_new.p12', 'key_new.p12 password'); ⚠️put the import/export password that you set here
