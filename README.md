@@ -55,6 +55,8 @@ Instead of relying on Apple’s native barcode formats, this implementation:
 - Export 2 items
 - Save as: certificates.p12 or whatever you like
 
+⚠️ Useful Links
+https://developer.apple.com/help/account/create-certificates/create-a-certificate-signing-request/
 
 🔧 Conversion Commands
 
@@ -129,9 +131,8 @@ $pass->create(true);
 
 ```
 
-⚠️ Useful Links
-https://developer.apple.com/help/account/create-certificates/create-a-certificate-signing-request/
-
+<br>
+<br>
 
 
 🧪 Included Examples in This Repository
