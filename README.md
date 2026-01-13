@@ -163,12 +163,9 @@ User submits:
 -Creates pass.json
 -Signs and generates the .pkpass file
 
-2️⃣ Example 2: JavaScript Barcode Generation (Frontend) + PHP Backend
-- The barcode is generated in the browser using JavaScript
+2️⃣ Example 2: JavaScript Barcode Generation (Frontend) + PHP Backend -- The barcode is generated in the browser using JavaScript
 
-Uses:
-
-JsBarcode (CODABAR)
+- Uses JsBarcode (CODABAR)
 - Barcode is rendered to a hidden <canvas>
 - Converted to a Base64 PNG
 - Sent to PHP via a hidden form field
