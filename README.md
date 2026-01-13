@@ -52,7 +52,7 @@ composer require pkpass/pkpass picqer/php-barcode-generator
 
 
 8️⃣ Export .p12
--Select certificate + private key
+- Select certificate + private key
 - Export 2 items
 - Save as: certificates.p12 or whatever you like
 
@@ -76,14 +76,15 @@ composer require pkpass/pkpass picqer/php-barcode-generator
 Apple-generated PassKit certificates often use legacy encryption that newer versions of OpenSSL cannot read by default.
 This commonly causes errors when php-pkpass tries to load Certificates.p12.
 
-> Download legacy.dll
-> Place it inside: OpenSSL-Win64\lib\ossl-modules
-> Enable OpenSSL Legacy Provider by using this command: $env:OPENSSL_MODULES="C:\Users\ipedeglorio\OpenSSL-Win64\lib\ossl-modules"
+- Download legacy.dll
+- Place it inside: OpenSSL-Win64\lib\ossl-modules
+- Enable OpenSSL Legacy Provider by using this command: $env:OPENSSL_MODULES="C:\Users\ipedeglorio\OpenSSL-Win64\lib\ossl-modules"
 ⚠️ This step is critical — without it, OpenSSL will fail. You can do this with the conversion commands mentioned above
 
 
 🧾 Pass JSON Example
 
+```php
 $passJson = [
     "formatVersion" => 1,
     "passTypeIdentifier" => "pass.yourpassid",
@@ -109,10 +110,13 @@ $passJson = [
         ]
     ]
 ];
+```
 
 
 
 🧩 PHP Pass Generation
+
+```php
 
 $pass = new PKPass('key_new.p12', 'key_new.p12 password'); ⚠️put the import/export password that you set here
 $pass->setData(json_encode($passJson));
@@ -124,7 +128,7 @@ $pass->addFile("strip.png");
 
 $pass->create(true);
 
-
+```
 
 ⚠️ Useful Links
 https://developer.apple.com/help/account/create-certificates/create-a-certificate-signing-request/
