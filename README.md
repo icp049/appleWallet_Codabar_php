@@ -59,13 +59,13 @@ composer require pkpass/pkpass picqer/php-barcode-generator
 
 🔧 Conversion Commands
 
-> cd dirname
-> $env:OPENSSL_MODULES="C:\Users\ipedeglorio\OpenSSL-Win64\lib\ossl-modules" 
-> openssl pkcs12 -legacy -in Certificates.p12 -nodes -out key_decrypted.tmp
-> Enter Import Password: (⚠️ Place a new password here, remember that as you will use that in your code later on)
-> openssl pkcs12 -in key_decrypted.tmp -export -out key_new.p12
-> Enter Export Password: (⚠️ Enter the password you indicated in import)
-> Verifying - Enter Export Password:
+- cd dirname
+- $env:OPENSSL_MODULES="C:\Users\ipedeglorio\OpenSSL-Win64\lib\ossl-modules" 
+- openssl pkcs12 -legacy -in Certificates.p12 -nodes -out key_decrypted.tmp
+- Enter Import Password: (⚠️ Place a new password here, remember that as you will use that in your code later on)
+- openssl pkcs12 -in key_decrypted.tmp -export -out key_new.p12
+- Enter Export Password: (⚠️ Enter the password you indicated in import)
+- Verifying - Enter Export Password:
 
 ✅ after the export password you should have the key_new.p12 in the same directory, you can then put the key_new.p12 in teh root folder of your project for testing or wherever.
 
