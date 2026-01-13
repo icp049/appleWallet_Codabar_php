@@ -131,3 +131,57 @@ $pass->create(true);
 
 ⚠️ Useful Links
 https://developer.apple.com/help/account/create-certificates/create-a-certificate-signing-request/
+
+
+
+🧪 Included Examples in This Repository
+
+- This repository includes two complete working examples for generating Apple Wallet passes using a CODABAR workaround, each demonstrating a different approach to barcode generation.
+- Both examples include: A frontend form and a backend php script
+- Full PassKit (.pkpass) generation using php-pkpass
+
+🅿️ Example 1: PHP-Only Barcode Generation (Backend)
+The barcode is generated entirely on the server
+Uses the PHP library:
+-picqer/php-barcode-generator
+-Generates a CODABAR barcode image (PNG) in PHP
+-Saves the barcode as strip.png
+-Embeds the image into the Apple Wallet pass
+
+🔹 Frontend
+Plain HTML form
+User submits:
+-Name
+-Account number
+-Membership flag
+-No JavaScript required
+
+🔹 Backend (PHP)
+-Generates CODABAR using PHP
+-Rescales and pads the barcode image for Apple Wallet compatibility
+-Creates pass.json
+-Signs and generates the .pkpass file
+
+🌐 Example 2: JavaScript Barcode Generation (Frontend) + PHP Backend
+- The barcode is generated in the browser using JavaScript
+
+Uses:
+
+JsBarcode (CODABAR)
+- Barcode is rendered to a hidden <canvas>
+- Converted to a Base64 PNG
+- Sent to PHP via a hidden form field
+
+🔹 Frontend (HTML + JavaScript)
+- Uses JsBarcode
+- Generates the CODABAR barcode client-side
+- Converts the barcode to a Base64 image
+- Submits it along with form data
+
+🔹 Backend (PHP)
+
+- Receives the Base64 barcode image
+- Decodes and saves it as strip.png
+- Creates pass.json
+- Signs and generates the .pkpass file
+
